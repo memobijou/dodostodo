@@ -1,0 +1,9 @@
+<h1><%= @item.title %></h1>
+<p><%= @item.description %></p>
+<p>
+    <%= link_to "Editieren", edit_item_path %> 
+    <%= link_to "Löschen", @item,:data => {:confirm => "Sicher?"} ,:method => :delete %>
+    <%=# link_to "Löschen2", item_path(@item), data: {confirm: "Bist du sicher?"}, method: :delete %> <!-- Andere Syntax! -->
+</p>
+
+<%=button_to "Zurück", root_path, method: :get, class: "btn btn-default"%>
